@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FreeServices from "./FreeServices";
 import { ChevronDown, ChevronUp, FileText, Users, ShieldAlert, Briefcase, LucideIcon } from 'lucide-react';
 import { Language } from '../types';
 import { CONTENT } from '../constants';
