@@ -1,38 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advocate | Allahabad High Court | Prayagraj</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                law: {
-                  900: '#0f172a',
-                  800: '#1e293b',
-                  gold: '#d97706',
-                  light: '#f8fafc',
-                }
-              },
-              fontFamily: {
-                serif: ['Merriweather', 'serif'],
-                sans: ['Open Sans', 'sans-serif'],
-              }
-            }
-          }
-        }
-    </script>
-    <style>
-      html { scroll-behavior: smooth; }
-      ::-webkit-scrollbar { width: 8px; }
-      ::-webkit-scrollbar-track { background: #f1f1f1; }
-      ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
-      ::-webkit-scrollbar-thumb:hover { background: #555; }
-    </style>
+  <body>
+    <div id="root"></div>
+
     <script type="importmap">
     {
       "imports": {
@@ -43,9 +11,23 @@
       }
     }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+
+    <script type="module">
+      import React from "react";
+      import ReactDOM from "react-dom/client";
+      import App from "./App.tsx";
+
+      const rootElement = document.getElementById("root");
+      if (!rootElement) {
+        throw new Error("Could not find root element to mount to");
+      }
+
+      const root = ReactDOM.createRoot(rootElement);
+      root.render(
+        React.createElement(React.StrictMode, null,
+          React.createElement(App, null)
+        )
+      );
+    </script>
   </body>
 </html>
