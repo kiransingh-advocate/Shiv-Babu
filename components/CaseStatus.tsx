@@ -33,7 +33,7 @@ const CaseStatus: React.FC<CaseStatusProps> = ({ lang }) => {
   };
 
   return (
-    <section id="status" className="py-20 bg-gray-50">
+    <section id="status" className="scroll-mt-20 py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
           <div className="p-8 md:p-12 text-center">

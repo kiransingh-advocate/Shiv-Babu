@@ -4,6 +4,7 @@ export const CONTENT: Record<'en' | 'hi', Translation> = {
   en: {
     nav: {
       home: "Home",
+      about: "About Us",
       services: "Services",
       students: "For Students",
       status: "Case Status",
@@ -36,6 +37,16 @@ export const CONTENT: Record<'en' | 'hi', Translation> = {
         subtitle: "Committed to upholding the constitution and ensuring fair trials."
       }
     ],
+    about: {
+      heading: "About Us",
+      title: "Trusted Legal Partners in Prayagraj",
+      description: [
+        "Welcome to Prayagraj Legal Chambers. With over 15 years of dedicated practice at the High Court of Judicature at Allahabad, we have established a reputation for integrity, diligence, and unwavering commitment to justice.",
+        "Our chambers specialize in a wide array of legal disciplines, ensuring that whether you are facing a criminal charge, a property dispute, or a complex constitutional matter, you have seasoned expertise by your side. We believe in a client-centric approach, offering personalized legal strategies that prioritize your best interests while maintaining the highest ethical standards."
+      ],
+      image: "https://picsum.photos/800/1000?random=99&grayscale",
+      experienceBadge: "15+ Years of Experience"
+    },
     services: {
       heading: "Our Practice Areas",
       subheading: "Comprehensive legal services tailored to your needs",
@@ -120,16 +131,47 @@ export const CONTENT: Record<'en' | 'hi', Translation> = {
         }
       ]
     },
+    faq: {
+      heading: "Frequently Asked Questions",
+      items: [
+        {
+          id: 1,
+          question: "How much do you charge for a consultation?",
+          answer: "Our initial consultation fee is nominal. For student services and certain pro-bono cases, we do not charge any fee. Specific case fees depend on the complexity of the matter."
+        },
+        {
+          id: 2,
+          question: "Do I need to be personally present for every hearing?",
+          answer: "Not necessarily. In the High Court, your advocate represents you. However, for certain stages like evidence or plea recording in lower courts, your presence might be mandatory."
+        },
+        {
+          id: 3,
+          question: "Do you handle cases in District Court as well?",
+          answer: "Yes, while our primary practice is at the Allahabad High Court, we also take up significant matters in the District Court of Prayagraj."
+        },
+        {
+          id: 4,
+          question: "What documents are required for filing a Bail Application?",
+          answer: "Typically, you need a copy of the FIR, the rejection order from the lower court, the Vakalatnama, and ID proofs. We will guide you through the specific requirements based on your case."
+        },
+        {
+          id: 5,
+          question: "Can I get a rental agreement made online?",
+          answer: "We can draft the agreement remotely, but for notarization and stamp duty, physical presence or coordination with our office clerk in Prayagraj is usually required."
+        }
+      ]
+    },
     footer: {
       about: "Senior Advocate practicing at the High Court of Judicature at Allahabad. Dedicated to justice and legal excellence.",
       address: "Chamber No. 45, High Court Compound, Prayagraj, UP, 211001",
       links: "Quick Links",
-      rights: "© 2024 Allahabad Legal Chambers. All Rights Reserved."
+      rights: "© 2024 Prayagraj Legal Chambers. All Rights Reserved."
     }
   },
   hi: {
     nav: {
       home: "मुख्य पृष्ठ",
+      about: "हमारे बारे में",
       services: "सेवाएं",
       students: "छात्रों के लिए",
       status: "मुकदमे की स्थिति",
@@ -162,6 +204,16 @@ export const CONTENT: Record<'en' | 'hi', Translation> = {
         subtitle: "संविधान को बनाए रखने और निष्पक्ष सुनवाई सुनिश्चित करने के लिए प्रतिबद्ध।"
       }
     ],
+    about: {
+      heading: "हमारे बारे में",
+      title: "प्रयागराज में विश्वसनीय कानूनी भागीदार",
+      description: [
+        "प्रयागराज लीगल चैम्बर्स में आपका स्वागत है। इलाहाबाद उच्च न्यायालय में 15 से अधिक वर्षों के समर्पित अभ्यास के साथ, हमने ईमानदारी, परिश्रम और न्याय के प्रति अटूट प्रतिबद्धता के लिए प्रतिष्ठा स्थापित की है।",
+        "हमारे चैंबर कानूनी विषयों की एक विस्तृत श्रृंखला में विशेषज्ञता रखते हैं, यह सुनिश्चित करते हुए कि चाहे आप किसी आपराधिक आरोप, संपत्ति विवाद, या जटिल संवैधानिक मामले का सामना कर रहे हों, आपके पास अनुभवी विशेषज्ञता है। हम एक ग्राहक-केंद्रित दृष्टिकोण में विश्वास करते हैं, व्यक्तिगत कानूनी रणनीतियों की पेशकश करते हैं जो उच्चतम नैतिक मानकों को बनाए रखते हुए आपके सर्वोत्तम हितों को प्राथमिकता देती हैं।"
+      ],
+      image: "https://picsum.photos/800/1000?random=99&grayscale",
+      experienceBadge: "15+ वर्षों का अनुभव"
+    },
     services: {
       heading: "हमारे कार्य क्षेत्र",
       subheading: "आपकी आवश्यकताओं के अनुरूप व्यापक कानूनी सेवाएं",
@@ -246,11 +298,41 @@ export const CONTENT: Record<'en' | 'hi', Translation> = {
         }
       ]
     },
+    faq: {
+      heading: "अक्सर पूछे जाने वाले प्रश्न",
+      items: [
+        {
+          id: 1,
+          question: "परामर्श के लिए आपका शुल्क क्या है?",
+          answer: "हमारा प्रारंभिक परामर्श शुल्क नाममात्र है। छात्र सेवाओं और कुछ प्रो-बोनो मामलों के लिए, हम कोई शुल्क नहीं लेते हैं। विशिष्ट केस शुल्क मामले की जटिलता पर निर्भर करता है।"
+        },
+        {
+          id: 2,
+          question: "क्या मुझे हर सुनवाई में व्यक्तिगत रूप से उपस्थित होने की आवश्यकता है?",
+          answer: "ज़रूरी नहीं है। उच्च न्यायालय में, आपका वकील आपका प्रतिनिधित्व करता है। हालाँकि, निचली अदालतों में साक्ष्य या दलील रिकॉर्ड करने जैसे कुछ चरणों के लिए, आपकी उपस्थिति अनिवार्य हो सकती है।"
+        },
+        {
+          id: 3,
+          question: "क्या आप जिला न्यायालय में भी मामले देखते हैं?",
+          answer: "हाँ, जबकि हमारा मुख्य कार्यक्षेत्र इलाहाबाद उच्च न्यायालय है, हम प्रयागराज के जिला न्यायालय में भी महत्वपूर्ण मामले लेते हैं।"
+        },
+        {
+          id: 4,
+          question: "जमानत याचिका दायर करने के लिए किन दस्तावेजों की आवश्यकता होती है?",
+          answer: "आमतौर पर, आपको एफआईआर की एक प्रति, निचली अदालत से अस्वीकृति आदेश, वकालतनामा और आईडी प्रूफ की आवश्यकता होती है। हम आपके मामले के आधार पर विशिष्ट आवश्यकताओं के बारे में आपका मार्गदर्शन करेंगे।"
+        },
+        {
+          id: 5,
+          question: "क्या मैं ऑनलाइन रेंटल एग्रीमेंट बनवा सकता हूँ?",
+          answer: "हम समझौते का मसौदा दूरस्थ रूप से तैयार कर सकते हैं, लेकिन नोटराइजेशन और स्टाम्प शुल्क के लिए, भौतिक उपस्थिति या प्रयागराज में हमारे कार्यालय क्लर्क के साथ समन्वय की आमतौर पर आवश्यकता होती है।"
+        }
+      ]
+    },
     footer: {
       about: "इलाहाबाद उच्च न्यायालय में वरिष्ठ अधिवक्ता। न्याय और कानूनी उत्कृष्टता के लिए समर्पित।",
       address: "चेंबर नंबर 45, हाई कोर्ट कंपाउंड, प्रयागराज, उत्तर प्रदेश, 211001",
       links: "त्वरित लिंक",
-      rights: "© 2024 इलाहाबाद लीगल चैम्बर्स। सर्वाधिकार सुरक्षित।"
+      rights: "© 2024 प्रयागराज लीगल चैम्बर्स। सर्वाधिकार सुरक्षित।"
     }
   }
 };

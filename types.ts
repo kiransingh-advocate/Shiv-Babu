@@ -24,9 +24,24 @@ export interface TestimonialData {
   image: string;
 }
 
+export interface FaqItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+export interface AboutSection {
+  heading: string;
+  title: string;
+  description: string[];
+  image: string;
+  experienceBadge: string;
+}
+
 export interface Translation {
   nav: {
     home: string;
+    about: string;
     services: string;
     students: string;
     status: string;
@@ -34,6 +49,7 @@ export interface Translation {
     cta: string;
   };
   hero: SlideData[];
+  about: AboutSection;
   services: {
     heading: string;
     subheading: string;
@@ -57,6 +73,10 @@ export interface Translation {
   testimonials: {
     heading: string;
     items: TestimonialData[];
+  };
+  faq: {
+    heading: string;
+    items: FaqItem[];
   };
   footer: {
     about: string;

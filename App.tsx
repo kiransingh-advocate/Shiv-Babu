@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import Services from './components/Services';
 import FreeServices from './components/FreeServices';
 import CaseStatus from './components/CaseStatus';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import { Language } from './types';
 
@@ -30,10 +32,12 @@ function App() {
     <div className="font-sans text-law-800 antialiased selection:bg-law-gold selection:text-white">
       <Navbar lang={lang} setLang={setLang} />
       <Hero lang={lang} />
+      <About lang={lang} />
       <Services lang={lang} />
       <FreeServices lang={lang} />
       <CaseStatus lang={lang} />
       <Testimonials lang={lang} />
+      <FAQ lang={lang} />
       <Footer lang={lang} />
     </div>
   );

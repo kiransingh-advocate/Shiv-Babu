@@ -38,10 +38,10 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-            <Gavel className="h-8 w-8 text-law-gold" />
-            <span className={`font-serif font-bold text-xl ${scrolled ? 'text-white' : 'text-white drop-shadow-md'}`}>
-              Allahabad<span className="text-law-gold">Legal</span>
+          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+            <Gavel className="h-10 w-10 md:h-12 md:w-12 text-law-gold" />
+            <span className={`font-serif font-bold text-2xl md:text-3xl ${scrolled ? 'text-white' : 'text-white drop-shadow-md'}`}>
+              Prayagraj<span className="text-law-gold">Legal</span>
             </span>
           </div>
 
@@ -52,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:text-law-gold ${scrolled ? 'text-gray-300' : 'text-white drop-shadow-md'}`}
+                  className={`px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200 hover:text-law-gold ${scrolled ? 'text-gray-300' : 'text-white drop-shadow-md'}`}
                 >
                   {link.name}
                 </a>
@@ -89,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-law-gold block px-3 py-2 rounded-md text-base font-medium"
+                className="text-gray-300 hover:text-law-gold block px-3 py-2 rounded-md text-lg font-bold"
               >
                 {link.name}
               </a>
@@ -99,7 +99,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
                   toggleLanguage();
                   setIsOpen(false);
                 }}
-                className="w-full text-left flex items-center gap-2 text-gray-300 hover:text-law-gold px-3 py-2 rounded-md text-base font-medium"
+                className="w-full text-left flex items-center gap-2 text-gray-300 hover:text-law-gold px-3 py-2 rounded-md text-lg font-bold"
               >
                 <Globe size={16} />
                 <span>{lang === 'en' ? 'Switch to Hindi' : 'Switch to English'}</span>
