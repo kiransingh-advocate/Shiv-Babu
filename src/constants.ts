@@ -163,7 +163,7 @@ export const CONTENT: Record<'en' | 'hi', Translation> = {
     },
     footer: {
       about: "Senior Advocate practicing at the High Court of Judicature at Allahabad. Dedicated to justice and legal excellence.",
-      address: "Chamber No. 45, High Court Compound, Prayagraj, UP, 211001",
+      address: "Chamber No. 09, High Court Compound, Prayagraj, UP, 211001",
       links: "Quick Links",
       rights: "© 2024 Prayagraj Legal Chambers. All Rights Reserved."
     }
@@ -330,7 +330,7 @@ export const CONTENT: Record<'en' | 'hi', Translation> = {
     },
     footer: {
       about: "इलाहाबाद उच्च न्यायालय में वरिष्ठ अधिवक्ता। न्याय और कानूनी उत्कृष्टता के लिए समर्पित।",
-      address: "चेंबर नंबर 45, हाई कोर्ट कंपाउंड, प्रयागराज, उत्तर प्रदेश, 211001",
+      address: "चेंबर नंबर 09, हाई कोर्ट कंपाउंड, प्रयागराज, उत्तर प्रदेश, 211001",
       links: "त्वरित लिंक",
       rights: "© 2024 प्रयागराज लीगल चैम्बर्स। सर्वाधिकार सुरक्षित।"
     }
