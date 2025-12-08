@@ -25,6 +25,10 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
     setLang(lang === 'en' ? 'hi' : 'en');
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const navLinks = [
     { name: t.home, href: "#home" },
     { name: t.services, href: "#services" },
@@ -38,7 +42,13 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+          <div
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer"
+            role="button"
+            tabIndex={0}
+            onClick={scrollToTop}
+            onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToTop(); } }}
+          >
             <Gavel className="h-10 w-10 md:h-12 md:w-12 text-law-gold" />
             <span className={`font-serif font-bold text-2xl md:text-3xl ${scrolled ? 'text-white' : 'text-white drop-shadow-md'}`}>
               Prayagraj<span className="text-law-gold">Legal</span>
