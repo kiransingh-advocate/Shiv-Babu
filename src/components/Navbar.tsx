@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Gavel, Globe } from 'lucide-react';
+import { Menu, X, Gavel, Globe, Phone } from 'lucide-react';
 import { Language } from '../types';
 import { CONTENT } from '../constants';
 
@@ -37,6 +37,11 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
     { name: t.contact, href: "#footer" },
   ];
 
+  // Remove contact from desktop links so CTA and links don't wrap
+  const desktopLinks = navLinks.filter(link => link.name !== t.contact);
+
+  const phoneNumber = '+917499165632';
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-law-900 shadow-lg py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,12 +62,12 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navLinks.map((link) => (
+            <div className="ml-10 flex items-baseline space-x-8 flex-nowrap">
+              {desktopLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200 hover:text-law-gold ${scrolled ? 'text-gray-300' : 'text-white drop-shadow-md'}`}
+                  className={`px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200 hover:text-law-gold ${scrolled ? 'text-gray-300' : 'text-white drop-shadow-md'} whitespace-nowrap`}
                 >
                   {link.name}
                 </a>
@@ -75,6 +80,17 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
                 <Globe size={16} />
                 <span className="text-xs font-bold uppercase">{lang === 'en' ? 'HI' : 'EN'}</span>
               </button>
+
+              {/* Call Now CTA - desktop */}
+              <a
+                href={`tel:${phoneNumber}`}
+                aria-label="Call now"
+                className="ml-3 hidden md:inline-flex items-center relative overflow-visible px-4 py-2 rounded-full bg-law-gold text-black font-bold shadow-lg hover:scale-105 transform transition-all"
+              >
+                <span className="absolute -inset-1 rounded-full bg-law-gold/40 opacity-80 animate-ping"></span>
+                <Phone size={16} className="mr-2 z-10" />
+                <span className="z-10">Call Now</span>
+              </a>
             </div>
           </div>
 
@@ -114,6 +130,14 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang }) => {
                 <Globe size={16} />
                 <span>{lang === 'en' ? 'Switch to Hindi' : 'Switch to English'}</span>
               </button>
+              <a
+                href={`tel:${phoneNumber}`}
+                aria-label="Call now"
+                className="mt-3 w-full inline-flex items-center justify-center gap-2 bg-law-gold text-black font-bold px-4 py-2 rounded-full shadow-md"
+              >
+                <Phone size={16} />
+                <span>Call Now</span>
+              </a>
           </div>
         </div>
       )}
